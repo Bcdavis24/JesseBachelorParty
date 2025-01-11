@@ -13,20 +13,24 @@
             padding: 0;
         }
         header {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('party.jpeg') no-repeat center/cover;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 40px 20px;
         }
         header h1 {
             font-size: 3.5em;
             margin: 0;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        header img {
+        .header-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .header-images img {
             width: 200px;
             height: auto;
-            margin: 10px;
             border-radius: 10px;
             border: 2px solid white;
         }
@@ -113,7 +117,10 @@
 <body>
     <header>
         <h1>Jesse's Farewell Tour: Debauchery City</h1>
-        <img src="party2.jpeg" alt="Party Fun">
+        <div class="header-images">
+            <img src="party.jpeg" alt="Party Fun">
+            <img src="party2.jpeg" alt="Party Fun">
+        </div>
     </header>
 
     <nav>
@@ -166,10 +173,9 @@
             <form class="poll-form" action="https://formspree.io/f/mvggdpko" method="POST">
                 <label for="destination">Choose a Destination:</label>
                 <select id="destination" name="destination" required>
-                    <option value="Vegas">Vegas</option>
-                    <option value="Miami">Miami</option>
-                    <option value="New Orleans">New Orleans</option>
-                    <option value="Nashville">Nashville</option>
+                    <option value="Lake Tahoe – Golf, Casino, Water, Bowling">Lake Tahoe</option>
+                    <option value="Reno – Golf, Casino, Bowling">Reno</option>
+                    <option value="St Louis – Golf, Casino, Bowling">St Louis</option>
                 </select>
 
                 <label for="reason">Why this spot? (Optional):</label>
