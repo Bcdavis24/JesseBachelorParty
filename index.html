@@ -13,7 +13,7 @@
             padding: 0;
         }
         header {
-            color: white;
+            color: black;
             text-align: center;
             padding: 40px 20px;
         }
@@ -94,6 +94,10 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
+        }
+        .rsvp-form select {
+            font-size: 1.2em;
+            padding: 10px;
         }
         .rsvp-form button, .poll-form button {
             background-color: #ff1e56;
@@ -191,7 +195,7 @@
             <form class="poll-form" action="https://formspree.io/f/mvggdpko" method="POST">
                 <label for="date">Choose a Date:</label>
                 <select id="date" name="date" required>
-                      <option value="Choose a Date">Choose a Date</option>
+                    <option value="Choose a Date">Choose a Date</option>
                     <option value="June 6 - 9">June 6 - 9</option>
                     <option value="June 13 - 16">June 13 - 16</option>
                     <option value="June 20 - 23">June 20 - 23</option>
