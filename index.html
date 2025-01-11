@@ -6,51 +6,82 @@
     <title>Jesse's Farewell Tour: Debauchery City</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f8f9fa;
             color: #121212;
             margin: 0;
             padding: 0;
         }
         header {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('party.jpeg') no-repeat center/cover;
+            color: white;
             text-align: center;
-            padding: 20px;
+            padding: 100px 20px;
         }
         header h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
         header img {
-            width: 300px;
+            width: 200px;
             height: auto;
             margin: 10px;
+            border-radius: 10px;
+            border: 2px solid white;
+        }
+        nav {
+            background-color: #121212;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff1e56;
         }
         .container {
             padding: 20px;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         .section {
             margin-bottom: 40px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
-            border-bottom: 2px solid #121212;
-            padding-bottom: 10px;
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
         .countdown {
             font-size: 2em;
             text-align: center;
             margin: 20px 0;
+            color: #ff1e56;
         }
         .rsvp-form, .poll-form {
-            background-color: #f4f4f4;
+            background-color: #ffffff;
             padding: 20px;
             border-radius: 10px;
             border: 1px solid #ccc;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         .rsvp-form label, .poll-form label {
             display: block;
             margin: 10px 0 5px;
+            font-weight: bold;
         }
         .rsvp-form input, .poll-form input, .rsvp-form button, .poll-form button, .poll-form select {
             width: 100%;
@@ -58,29 +89,42 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            font-size: 1em;
         }
         .rsvp-form button, .poll-form button {
             background-color: #ff1e56;
             color: white;
             cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .rsvp-form button:hover, .poll-form button:hover {
+            transform: scale(1.05);
+            background-color: #d01745;
         }
         footer {
-            background-color: #f4f4f4;
+            background-color: #121212;
+            color: white;
             text-align: center;
-            padding: 10px;
-            font-size: 0.8em;
+            padding: 20px;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Jesse's Farewell Tour: Debauchery City</h1>
-        <img src="party.jpeg" alt="Photo 1">
-        <img src="party2.jpeg" alt="Photo 2">
+        <img src="party2.jpeg" alt="Party Fun">
     </header>
 
+    <nav>
+        <a href="#details">Event Details</a>
+        <a href="#countdown">Countdown</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#poll">Poll</a>
+    </nav>
+
     <div class="container">
-        <div class="section">
+        <div id="details" class="section">
             <h2>Event Details</h2>
             <p><strong>When:</strong> Saturday, June 15th, 2025, 7:00 PM</p>
             <p><strong>Where:</strong> The Lucky Spade Bar, Downtown</p>
@@ -93,12 +137,12 @@
             </ul>
         </div>
 
-        <div class="section">
+        <div id="countdown" class="section">
             <h2>Countdown</h2>
-            <div class="countdown" id="countdown">Loading...</div>
+            <div class="countdown" id="countdown-timer">Loading...</div>
         </div>
 
-        <div class="section">
+        <div id="rsvp" class="section">
             <h2>RSVP</h2>
             <form class="rsvp-form" action="https://formspree.io/f/mvggdpko" method="POST">
                 <label for="name">Your Name:</label>
@@ -117,9 +161,9 @@
             </form>
         </div>
 
-        <div class="section">
+        <div id="poll" class="section">
             <h2>Where Should We Go?</h2>
-            <form class="poll-form" action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST">
+            <form class="poll-form" action="https://formspree.io/f/mvggdpko" method="POST">
                 <label for="destination">Choose a Destination:</label>
                 <select id="destination" name="destination" required>
                     <option value="Vegas">Vegas</option>
@@ -151,7 +195,7 @@
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            document.getElementById('countdown').textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            document.getElementById('countdown-timer').textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
         }
 
         setInterval(updateCountdown, 1000);
