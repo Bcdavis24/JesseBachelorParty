@@ -170,7 +170,7 @@
 
     <nav>
         <a href="#details">Event Details</a>
-        <a href="#countdown">Countdown</a>
+        
         <a href="#rsvp">RSVP</a>
         <a href="#poll">Poll</a>
     </nav>
@@ -184,9 +184,7 @@
             
         </div>
 
-        <div id="countdown" class="section" style="width: 10%; position: absolute; top: 0; left: 0; margin: 10px;">
-            <h2 style="color: black;">Countdown</h2>
-            <div class="countdown" id="countdown-timer" style="color: black;">Loading...</div>
+        
         </div>
         </div>
 
@@ -251,20 +249,7 @@
     </footer>
 
     <script>
-        function updateCountdown() {
-            const eventDate = new Date('2025-06-15T19:00:00');
-            const now = new Date();
-            const timeLeft = eventDate - now;
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            document.getElementById('countdown-timer').textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-
-        setInterval(updateCountdown, 1000);
+        
     </script>
 </body>
 </html>
