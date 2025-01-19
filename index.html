@@ -37,6 +37,13 @@
             .rsvp-form input, .poll-form input, .poll-form select {
                 font-size: 0.9em;
             }
+
+            #countdown {
+                width: 20%;
+                position: relative;
+                margin: 10px auto;
+                text-align: center;
+            }
         }
         body {
             font-family: 'Helvetica', Arial, sans-serif;
@@ -53,6 +60,7 @@
         header h1 {
             font-size: 3.5em;
             margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
         .header-images {
             display: flex;
@@ -63,7 +71,26 @@
         .header-images img {
             width: 200px;
             height: auto;
+            
             border: 2px solid white;
+        }
+        nav {
+            background-color: #121212;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ff1e56;
         }
         .container {
             padding: 20px;
@@ -72,53 +99,65 @@
         }
         .section {
             margin-bottom: 40px;
+            
             border-radius: 10px;
             padding: 20px;
+            
         }
-        .poll-form, .rsvp-form {
-            max-width: 800px;
-            margin: 0 auto;
+        .section h2 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .countdown {
+            font-size: 1em;
+            text-align: center;
+            margin: 20px 0;
+            color: #ff1e56;
+        }
+        .rsvp-form, .poll-form {
+            background-color: #ffffff;
             padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .poll-form label, .poll-form select, .poll-form input,
-        .rsvp-form label, .rsvp-form select, .rsvp-form input {
+        .rsvp-form label, .poll-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        .rsvp-form input, .poll-form input, .rsvp-form button, .poll-form button, .poll-form select {
+            box-sizing: border-box;
             width: 100%;
-            margin-bottom: 10px;
             padding: 10px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
         }
-        .poll-form button, .rsvp-form button {
+        .rsvp-form select {
+            font-size: 1.2em;
+            padding: 10px;
+        }
+        .rsvp-form button, .poll-form button {
             background-color: #121212;
             color: white;
             cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .rsvp-form button:hover, .poll-form button:hover {
+            transform: scale(1.05);
+            background-color: #d01745;
+        }
+        footer {
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll("form").forEach(form => {
-                form.addEventListener("submit", function(event) {
-                    event.preventDefault();
-                    const formData = new FormData(form);
-                    fetch(form.action, {
-                        method: "POST",
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    }).then(response => {
-                        if (response.ok) {
-                            alert("Your submission has been received! Thank you.");
-                            form.reset();
-                        } else {
-                            alert("There was an error submitting your response. Please try again.");
-                        }
-                    }).catch(error => {
-                        alert("There was an error submitting your response. Please try again.");
-                    });
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <header>
@@ -128,13 +167,21 @@
             <img src="party2.jpeg" alt="Party Fun">
         </div>
     </header>
+
+    <nav>
+        <a href="#details">Event Details</a>
+        
+        <a href="#rsvp">RSVP</a>
+        <a href="#poll">Poll</a>
+    </nav>
+
     <div class="container">
-        <div id="details" class="section" style="background-color: white;">
+        <div id="details" class="section" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
             <h2>Event Details</h2>
             <p style="font-family: 'Georgia', serif; font-size: 1.2em; font-weight: bold; text-align: center; line-height: 1.6; margin: 20px 0;">Join us in saying Farewell to Jesse Davis—a man who’s lived boldly, defied the odds, and is still standing. Legend has it this cool cat has burned through most of his 9 lives. Which begs the most important question: how many lives does he have left? We are going to find out…let the countdown to debauchery begin!</p>
             <p><strong>When:</strong> Please Vote Below</p>
             <p><strong>Where:</strong> Please Vote Below</p>
-        </div>
+</div>
         <div id="rsvp" class="section">
             <h2>RSVP</h2>
             <form class="rsvp-form" action="https://formspree.io/f/mvggdpko" method="POST">
