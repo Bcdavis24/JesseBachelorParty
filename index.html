@@ -96,6 +96,47 @@
             font-size: 1.1em;
             color: #555;
         }
+            /* Mobile-Friendly Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            .header-images {
+                flex-direction: column;
+                align-items: center;
+            }
+            .header-images img {
+                width: 150px;
+                margin-bottom: 10px;
+            }
+            nav a {
+                font-size: 1em;
+            }
+            .container {
+                padding: 10px;
+            }
+            .section {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            .cost-table td {
+                padding: 5px 10px;
+            }
+            .itinerary-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 15px;
+            }
+            .itinerary-date {
+                font-size: 1.5em;
+                min-width: auto;
+                margin-bottom: 10px;
+            }
+            .itinerary-content {
+                padding-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
