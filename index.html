@@ -147,12 +147,19 @@
             <img src="party1.jpeg" alt="Party Fun">
             <img src="party2.jpeg" alt="Party Fun">
         </div>
-        <nav style="background-color: #121212; padding: 15px 0; text-align: center; width: 100%; margin-top: 20px;">
-            <a href="#details" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Event Details</a>
-            <a href="#upfront-costs" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Upfront Costs</a>
-            <a href="#estimated-total" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Estimated Total $$$</a>
-            <a href="#itinerary" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Itinerary</a>
+        <button id="menu-toggle" style="background: #121212; color: white; padding: 10px; border: none; font-size: 1.2em; cursor: pointer; width: 100%; margin-top: 20px;">☰ Menu</button>
+        <nav id="nav-menu" style="display: none; background-color: #121212; padding: 15px 0; text-align: center; width: 100%;">
+            <a href="#details" style="color: white; text-decoration: none; display: block; padding: 10px;">Event Details</a>
+            <a href="#upfront-costs" style="color: white; text-decoration: none; display: block; padding: 10px;">Upfront Costs</a>
+            <a href="#estimated-total" style="color: white; text-decoration: none; display: block; padding: 10px;">Estimated Total $$$</a>
+            <a href="#itinerary" style="color: white; text-decoration: none; display: block; padding: 10px;">Itinerary</a>
         </nav>
+        <script>
+            document.getElementById("menu-toggle").addEventListener("click", function() {
+                var menu = document.getElementById("nav-menu");
+                menu.style.display = (menu.style.display === "none" || menu.style.display === "") ? "block" : "none";
+            });
+        </script>
     </header>
     
     <div class="container">
@@ -179,7 +186,7 @@
             </table>
             <p><strong>Payment Method:</strong> Venmo @brandon-davis-269. QR code found below.</p>
             <p><strong>Payment Due Date:</strong> March 1st, 2025</p>
-            <p>The final cost of the trip is decided by the number of people attending, divided equally (minus Jesse). This includes the items above and is the price of admission. If you have any issues paying the full amount by the due date, please reach out to Jesse directly and we will absolutely find a solution. Loans and payment plans available, sponsored by the bachelor himself ;-) </p>
+            <p>The final upfront cost was decided by the number of people attending, divided equally (minus Jesse). This includes the items above and is the price of admission. If you have any issues paying the full amount by the due date, please reach out to Jesse directly and we will absolutely find a solution. Loans and payment plans available, sponsored by the bachelor himself ;-)</p>
             <div style="text-align: center; margin-top: 15px;">
                 <img src="venmo.jpeg" alt="Venmo QR Code" style="width: 200px; height: auto;">
             </div>
