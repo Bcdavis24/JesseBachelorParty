@@ -22,6 +22,17 @@
             margin: 0;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+        .header-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .header-images img {
+            width: 200px;
+            height: auto;
+            border: 2px solid white;
+        }
         .container {
             padding: 20px;
             max-width: 800px;
@@ -45,26 +56,20 @@
         }
         .cost-table td {
             padding: 5px 20px;
-        }
-        .itinerary-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .itinerary-table th, .itinerary-table td {
-            padding: 10px;
             text-align: left;
         }
-        .due-date {
-            font-weight: bold;
-            color: red;
-            text-align: center;
-            margin-top: 10px;
+        .cost-table td:last-child {
+            text-align: right;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Jesse's Farewell Tour: Debauchery City</h1>
+        <div class="header-images">
+            <img src="party1.jpeg" alt="Party Fun">
+            <img src="party2.jpeg" alt="Party Fun">
+        </div>
     </header>
     
     <div class="container">
@@ -73,58 +78,75 @@
             <p><strong>Duration:</strong> 3 nights!</p>
             <p><strong>Cost $$$:</strong> Final cost of the trip will be decided by the number of people attending, divided equally minus Jesse. This will include lodging, food, booze, and golf. Flights not included.</p>
             <p><strong>When:</strong> May 23 - May 26</p>
-            <p><strong>Where:</strong> Lake Tahoe & Reno</p>
+            <p><strong>Where:</strong> Lake Tahoe</p>
+            <p><strong>Address:</strong> 12385 Sierra Drive, Truckee, CA 96161</p>
         </div>
-
+        
         <div class="section" id="upfront-costs">
             <h2>Upfront Costs</h2>
             <table class="cost-table">
-                <tr><td style="text-align: left;">Lodging</td><td style="text-align: right;">$320</td></tr>
-                <tr><td style="text-align: left;">Golf</td><td style="text-align: right;">$150</td></tr>
-                <tr><td style="text-align: left;">Bowling</td><td style="text-align: right;">$50</td></tr>
-                <tr><td style="text-align: left;">Food/Beverages</td><td style="text-align: right;">$200</td></tr>
-                <tr><td style="text-align: left;">Van Rental</td><td style="text-align: right;">$30</td></tr>
-                <tr class="total"><td style="text-align: left;"><strong>TOTAL</strong></td><td style="text-align: right;"><strong>$750</strong></td></tr>
+                <tr><td>Lodging</td><td>$320</td></tr>
+                <tr><td>Golf</td><td>$150</td></tr>
+                <tr><td>Bowling</td><td>$50</td></tr>
+                <tr><td>Food/Beverages</td><td>$200</td></tr>
+                <tr><td>Van Rental</td><td>$30</td></tr>
+                <tr><td><strong>TOTAL</strong></td><td><strong>$750</strong></td></tr>
             </table>
-            <p class="due-date">Due Date: <em>Saturday, March 1, 2025</em></p>
         </div>
 
         <div class="section" id="estimated-total">
             <h2>Estimated Total $$$</h2>
             <table class="cost-table">
-                <tr><td style="text-align: left;">Upfront Cost</td><td style="text-align: right;">$750</td></tr>
-                <tr><td style="text-align: left;">Flight</td><td style="text-align: right;">$350</td></tr>
-                <tr><td style="text-align: left;">Casino</td><td style="text-align: right;">$150</td></tr>
-                <tr><td style="text-align: left;">Other</td><td style="text-align: right;">$150</td></tr>
-                <tr><td style="text-align: left;">Ubers</td><td style="text-align: right;">$50</td></tr>
-                <tr class="total"><td style="text-align: left;"><strong>TOTAL</strong></td><td style="text-align: right;"><strong>$1,450</strong></td></tr>
+                <tr><td>Upfront Cost</td><td>$750</td></tr>
+                <tr><td>Flight</td><td>$350</td></tr>
+                <tr><td>Casino</td><td>$150</td></tr>
+                <tr><td>Other</td><td>$150</td></tr>
+                <tr><td>Ubers</td><td>$50</td></tr>
+                <tr><td><strong>TOTAL</strong></td><td><strong>$1,450</strong></td></tr>
             </table>
         </div>
-
+        
         <div class="section" id="itinerary">
             <h2>Itinerary</h2>
-            <table class="itinerary-table">
-                <tr><th>Fri, May 23</th></tr>
-                <tr><td>5pm - Arrival</td></tr>
-                <tr><td>7pm - Dinner at the house</td></tr>
-                <tr><td>8pm+ - Bedtime ;-)</td></tr>
-                
-                <tr><th>Sat, May 24</th></tr>
-                <tr><td>8am - Breakfast is served</td></tr>
-                <tr><td>10am - Golf</td></tr>
-                <tr><td>6pm - Dinner at the house</td></tr>
-                <tr><td>7pm+ - Bowling & Casino (Lake Tahoe)</td></tr>
-                
-                <tr><th>Sun, May 25</th></tr>
-                <tr><td>10am - Brunch</td></tr>
-                <tr><td>12pm - Lake/Beach</td></tr>
-                <tr><td>3pm - Pre Game/Get Ready for Night Out</td></tr>
-                <tr><td>4pm+ - Evening in Reno (Dinner, Casinos/Bars, Other)</td></tr>
-                
-                <tr><th>Mon, May 26</th></tr>
-                <tr><td>9am - Clean/Pack</td></tr>
-                <tr><td>11am - Adios</td></tr>
-            </table>
+            <div class="itinerary">
+                <div class="itinerary-card">
+                    <div class="itinerary-date">23 <br> May</div>
+                    <div class="itinerary-content">
+                        <h3>Friday</h3>
+                        <p>5pm - Arrival</p>
+                        <p>7pm - Dinner at the house</p>
+                        <p>8pm+ - Bedtime ;-)</p>
+                    </div>
+                </div>
+                <div class="itinerary-card">
+                    <div class="itinerary-date">24 <br> May</div>
+                    <div class="itinerary-content">
+                        <h3>Saturday</h3>
+                        <p>8am - Breakfast is served</p>
+                        <p>10am - Golf</p>
+                        <p>6pm - Dinner at the house</p>
+                        <p>7pm+ - Bowling & Casino (Lake Tahoe)</p>
+                    </div>
+                </div>
+                <div class="itinerary-card">
+                    <div class="itinerary-date">25 <br> May</div>
+                    <div class="itinerary-content">
+                        <h3>Sunday</h3>
+                        <p>10am - Brunch</p>
+                        <p>12pm - Lake/Beach</p>
+                        <p>3pm - Pre Game/Get Ready for Night Out</p>
+                        <p>4pm+ - Evening in Reno (Dinner, Casinos/Bars, Other)</p>
+                    </div>
+                </div>
+                <div class="itinerary-card">
+                    <div class="itinerary-date">26 <br> May</div>
+                    <div class="itinerary-content">
+                        <h3>Monday</h3>
+                        <p>9am - Clean/Pack</p>
+                        <p>11am - Adios</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
