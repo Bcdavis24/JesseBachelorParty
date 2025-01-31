@@ -5,46 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jesse's Farewell Tour: Debauchery City</title>
     <style>
-        /* Mobile-Friendly Styles */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .header-images {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .header-images img {
-                width: 150px;
-                margin-bottom: 10px;
-            }
-
-            nav a {
-                font-size: 1em;
-            }
-
-            .container {
-                padding: 10px;
-            }
-
-            .section {
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-
-            .rsvp-form input, .poll-form input, .poll-form select {
-                font-size: 0.9em;
-            }
-
-            #countdown {
-                width: 20%;
-                position: relative;
-                margin: 10px auto;
-                text-align: center;
-            }
-        }
         body {
             font-family: 'Helvetica', Arial, sans-serif;
             background-color: #f8f9fa;
@@ -62,165 +22,109 @@
             margin: 0;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        .header-images {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .header-images img {
-            width: 200px;
-            height: auto;
-            
-            border: 2px solid white;
-        }
-        nav {
-            background-color: #121212;
-            padding: 15px 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ff1e56;
-        }
         .container {
             padding: 20px;
-            max-width: 1000px;
+            max-width: 800px;
             margin: 0 auto;
         }
         .section {
-            margin-bottom: 40px;
-            
-            border-radius: 10px;
+            background-color: white;
             padding: 20px;
-            
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
         .section h2 {
             text-align: center;
             font-size: 2em;
             margin-bottom: 20px;
         }
-        .countdown {
-            font-size: 1em;
-            text-align: center;
-            margin: 20px 0;
-            color: #ff1e56;
-        }
-        .rsvp-form, .poll-form {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid #ccc;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .rsvp-form label, .poll-form label {
-            display: block;
-            margin: 10px 0 5px;
-            font-weight: bold;
-        }
-        .rsvp-form input, .poll-form input, .rsvp-form button, .poll-form button, .poll-form select {
-            box-sizing: border-box;
+        .cost-table {
             width: 100%;
+            border-collapse: collapse;
+        }
+        .cost-table td {
+            padding: 5px 20px;
+        }
+        .itinerary-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .itinerary-table th, .itinerary-table td {
             padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
+            text-align: left;
         }
-        .rsvp-form select {
-            font-size: 1.2em;
-            padding: 10px;
-        }
-        .rsvp-form button, .poll-form button {
-            background-color: #121212;
-            color: white;
-            cursor: pointer;
-            transition: transform 0.3s ease, background-color 0.3s ease;
-        }
-        .rsvp-form button:hover, .poll-form button:hover {
-            transform: scale(1.05);
-            background-color: #d01745;
-        }
-        footer {
-            background-color: #121212;
-            color: white;
+        .due-date {
+            font-weight: bold;
+            color: red;
             text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Jesse's Farewell Tour: Debauchery City</h1>
-        <div class="header-images">
-            <img src="party1.jpeg" alt="Party Fun">
-            <img src="party2.jpeg" alt="Party Fun">
-        </div>
     </header>
-
-    <nav>
-        <a href="#details">Event Details</a>
-        
-        <a href="#rsvp">RSVP</a>
-        <a href="#poll">Poll</a>
-    </nav>
-
+    
     <div class="container">
-        <div id="details" class="section" style="background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        <div class="section" id="details">
             <h2>Event Details</h2>
-            <p style="font-family: 'Georgia', serif; font-size: 1.2em; font-weight: bold; text-align: center; line-height: 1.6; margin: 20px 0;">Join us in saying Farewell to Jesse Davis—a man who’s lived boldly, defied the odds, and is still standing. Legend has it, this cool cat has burned through most of his 9 lives. Which begs the most important question: how many lives does he have left? We are going to find out…let the countdown to debauchery begin!</p>
             <p><strong>Duration:</strong> 3 nights!</p>
             <p><strong>Cost $$$:</strong> Final cost of the trip will be decided by the number of people attending, divided equally minus Jesse. This will include lodging, food, booze, and golf. Flights not included.</p>
-            <p><strong>When:</strong> Please Vote Below</p>
-            <p><strong>Where:</strong> Please Vote Below</p>
-</div>
-        <div id="rsvp" class="section">
-            <h2>RSVP</h2>
-            <form class="rsvp-form" action="https://formspree.io/f/mvggdpko" method="POST">
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="attending">Are You Attending?</label>
-                <select id="attending" name="attending" required>
-                    <option value="Yes">Yes</option>
-                    <option value="No">No</option>
-                </select>
-                <button type="submit">Submit RSVP</button>
-            </form>
+            <p><strong>When:</strong> May 23 - May 26</p>
+            <p><strong>Where:</strong> Lake Tahoe & Reno</p>
         </div>
-        <div id="poll-combined" class="section">
-            <h2>Poll: Choose Your Destination & Date</h2>
-            <form class="poll-form" action="https://formspree.io/f/mvggdpko" method="POST">
-                <label for="destination">Choose a Destination:</label>
-                <select id="destination" name="destination" required>
-                    <option value="Choose a Destination">Choose a Destination</option>
-                    <option value="Lake Tahoe">Lake Tahoe</option>
-                    <option value="Reno">Reno</option>
-                    <option value="St Louis">St Louis</option>
-                </select>
-                <label for="date">Choose a Date:</label>
-                <select id="date" name="date" required>
-                    <option value="Choose a Date">Choose a Date</option>
-                    <option value="May 23 - 26">May 23 - 26</option>
-                    <option value="June 20 - 23">June 20 - 23</option>
-                </select>
-                <label for="reason">Why this spot? (Optional):</label>
-                <input type="text" id="reason" name="reason">
-                <label for="date-reason">Why this weekend? (Optional):</label>
-                <input type="text" id="date-reason" name="date-reason">
-                <button type="submit">Submit Your Vote</button>
-            </form>
+
+        <div class="section" id="upfront-costs">
+            <h2>Upfront Costs</h2>
+            <table class="cost-table">
+                <tr><td style="text-align: left;">Lodging</td><td style="text-align: right;">$320</td></tr>
+                <tr><td style="text-align: left;">Golf</td><td style="text-align: right;">$150</td></tr>
+                <tr><td style="text-align: left;">Bowling</td><td style="text-align: right;">$50</td></tr>
+                <tr><td style="text-align: left;">Food/Beverages</td><td style="text-align: right;">$200</td></tr>
+                <tr><td style="text-align: left;">Van Rental</td><td style="text-align: right;">$30</td></tr>
+                <tr class="total"><td style="text-align: left;"><strong>TOTAL</strong></td><td style="text-align: right;"><strong>$750</strong></td></tr>
+            </table>
+            <p class="due-date">Due Date: <em>Saturday, March 1, 2025</em></p>
+        </div>
+
+        <div class="section" id="estimated-total">
+            <h2>Estimated Total $$$</h2>
+            <table class="cost-table">
+                <tr><td style="text-align: left;">Upfront Cost</td><td style="text-align: right;">$750</td></tr>
+                <tr><td style="text-align: left;">Flight</td><td style="text-align: right;">$350</td></tr>
+                <tr><td style="text-align: left;">Casino</td><td style="text-align: right;">$150</td></tr>
+                <tr><td style="text-align: left;">Other</td><td style="text-align: right;">$150</td></tr>
+                <tr><td style="text-align: left;">Ubers</td><td style="text-align: right;">$50</td></tr>
+                <tr class="total"><td style="text-align: left;"><strong>TOTAL</strong></td><td style="text-align: right;"><strong>$1,450</strong></td></tr>
+            </table>
+        </div>
+
+        <div class="section" id="itinerary">
+            <h2>Itinerary</h2>
+            <table class="itinerary-table">
+                <tr><th>Fri, May 23</th></tr>
+                <tr><td>5pm - Arrival</td></tr>
+                <tr><td>7pm - Dinner at the house</td></tr>
+                <tr><td>8pm+ - Bedtime ;-)</td></tr>
+                
+                <tr><th>Sat, May 24</th></tr>
+                <tr><td>8am - Breakfast is served</td></tr>
+                <tr><td>10am - Golf</td></tr>
+                <tr><td>6pm - Dinner at the house</td></tr>
+                <tr><td>7pm+ - Bowling & Casino (Lake Tahoe)</td></tr>
+                
+                <tr><th>Sun, May 25</th></tr>
+                <tr><td>10am - Brunch</td></tr>
+                <tr><td>12pm - Lake/Beach</td></tr>
+                <tr><td>3pm - Pre Game/Get Ready for Night Out</td></tr>
+                <tr><td>4pm+ - Evening in Reno (Dinner, Casinos/Bars, Other)</td></tr>
+                
+                <tr><th>Mon, May 26</th></tr>
+                <tr><td>9am - Clean/Pack</td></tr>
+                <tr><td>11am - Adios</td></tr>
+            </table>
         </div>
     </div>
 </body>
