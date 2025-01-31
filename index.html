@@ -61,22 +61,66 @@
         .cost-table td:last-child {
             text-align: right;
         }
+        .itinerary {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .itinerary-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .itinerary-date {
+            font-size: 2em;
+            font-weight: bold;
+            color: #d17a22;
+            text-align: center;
+            min-width: 80px;
+        }
+        .itinerary-content {
+            flex: 1;
+            padding-left: 15px;
+        }
+        .itinerary-content h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #2c3e50;
+        }
+        .itinerary-content p {
+            margin: 5px 0;
+            font-size: 1.1em;
+            color: #555;
+        }
     </style>
 </head>
 <body>
+    
     <header>
         <h1>Jesse's Farewell Tour: Debauchery City</h1>
         <div class="header-images">
             <img src="party1.jpeg" alt="Party Fun">
             <img src="party2.jpeg" alt="Party Fun">
         </div>
+        <nav style="background-color: #121212; padding: 15px 0; text-align: center; width: 100%; margin-top: 20px;">
+            <a href="#details" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Event Details</a>
+            <a href="#upfront-costs" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Upfront Costs</a>
+            <a href="#estimated-total" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Estimated Total $$$</a>
+            <a href="#itinerary" style="color: white; text-decoration: none; margin: 0 15px; font-size: 1.2em; transition: color 0.3s ease;">Itinerary</a>
+        </nav>
     </header>
     
     <div class="container">
         <div class="section" id="details">
             <h2>Event Details</h2>
             <p><strong>Duration:</strong> 3 nights!</p>
-            <p><strong>Cost $$$:</strong> Final cost of the trip will be decided by the number of people attending, divided equally minus Jesse. This will include lodging, food, booze, and golf. Flights not included.</p>
+            <p><strong>Cost $$$:</strong> $750 owed upfront.</p>
+            <p><strong>Payment Method:</strong> Venmo @brandon-davis-269. QR code found below.</p>
+            <p><strong>Payment Due Date:</strong> March 1st, 2025</p>
             <p><strong>When:</strong> May 23 - May 26</p>
             <p><strong>Where:</strong> Lake Tahoe</p>
             <p><strong>Address:</strong> 12385 Sierra Drive, Truckee, CA 96161</p>
@@ -92,6 +136,12 @@
                 <tr><td>Van Rental</td><td>$30</td></tr>
                 <tr><td><strong>TOTAL</strong></td><td><strong>$750</strong></td></tr>
             </table>
+            <p><strong>Payment Method:</strong> Venmo @brandon-davis-269. QR code found below.</p>
+            <p><strong>Payment Due Date:</strong> March 1st, 2025</p>
+            <p>The final cost of the trip is decided by the number of people attending, divided equally (minus Jesse). This includes the items above. Even if you do not golf, bowl, or stay all 3 nights. This is the total cost. Package deal.</p>
+            <div style="text-align: center; margin-top: 15px;">
+                <img src="venmo.png" alt="Venmo QR Code" style="width: 200px; height: auto;">
+            </div>
         </div>
 
         <div class="section" id="estimated-total">
