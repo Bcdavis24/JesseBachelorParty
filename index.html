@@ -97,77 +97,8 @@
             color: #555;
         }
             /* Mobile-Friendly Styles */
-        @media (max-width: 768px) {
-            .itinerary-card {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
-                padding: 15px;
-            }
-            .itinerary-date {
-                font-size: 1.5em;
-                min-width: 80px;
-                text-align: left;
-                margin-bottom: 0;
-            }
-            .itinerary-content {
-                padding-left: 15px;
-                text-align: left;
-            }
-            .itinerary-card {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
-                padding: 15px;
-            }
-            .itinerary-date {
-                font-size: 1.5em;
-                min-width: 80px;
-                text-align: center;
-                margin-bottom: 0;
-            }
-            .itinerary-content {
-                padding-left: 15px;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-            .header-images {
-                flex-direction: column;
-                align-items: center;
-            }
-            .header-images img {
-                width: 150px;
-                margin-bottom: 10px;
-            }
-            nav a {
-                font-size: 1em;
-            }
-            .container {
-                padding: 10px;
-            }
-            .section {
-                padding: 15px;
-                margin-bottom: 20px;
-            }
-            .cost-table td {
-                padding: 5px 10px;
-            }
-            .itinerary-card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-                padding: 15px;
-            }
-            .itinerary-date {
-                font-size: 1.5em;
-                min-width: auto;
-                margin-bottom: 10px;
-            }
-            .itinerary-content {
-                padding-left: 0;
-            }
-        }
+        
+    
     </style>
 </head>
 <body>
@@ -181,9 +112,9 @@
         <button id="menu-toggle" style="background: #800020; color: white; padding: 10px; border: none; font-size: 1.2em; cursor: pointer; width: 100%; margin-top: 20px;">☰ Menu</button>
         <nav id="nav-menu" style="display: none; background-color: white; padding: 15px 0; text-align: center; width: 100%;">
             <a href="$1" style="color: black; text-decoration: none; display: block; padding: 10px;">Event Details</a>
-            <a href="#upfront-costs" style="color: white; text-decoration: none; display: block; padding: 10px;">Upfront Costs</a>
-            <a href="#estimated-total" style="color: white; text-decoration: none; display: block; padding: 10px;">Estimated Total $$$</a>
-            <a href="#itinerary" style="color: white; text-decoration: none; display: block; padding: 10px;">Itinerary</a>
+            <a href="#upfront-costs" style="color: black; text-decoration: none; display: block; padding: 10px;">Upfront Costs</a>
+            <a href="#estimated-total" style="color: black; text-decoration: none; display: block; padding: 10px;">Estimated Total $$$</a>
+            <a href="#itinerary" style="color: black; text-decoration: none; display: block; padding: 10px;">Itinerary</a>
         </nav>
         <script>
             document.getElementById("menu-toggle").addEventListener("click", function() {
